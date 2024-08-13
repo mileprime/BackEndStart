@@ -7,8 +7,12 @@ function add(a, b) {
 function zombie(a, b, c) {
     return a * b * c;
 };
+function radar(a, b, c, d) {
+    return a * b * c - d;
+};
 
 module.exports = {
     add,
-    zombie
+    zombie,
+    radar
 }

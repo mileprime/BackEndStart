@@ -5,6 +5,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
+    //create routes
     if (req.url === '/') {
         res.end('Welcome to the Home Page!\n');
     } else if (req.url === '/about'){
@@ -15,8 +16,8 @@ const server = http.createServer((req, res) => {
         res.end('Welcome Ochonogor!');
     }
     else {
-        res.statusCode = 404;
-        res.write('Loading\n');
+        res.statusCode = 404;               
+        res.write('Loading\n');                 //  use write before end
         res.write('Page Missing\n');
         res.end('Page Not Found\n');
         

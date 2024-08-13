@@ -5,7 +5,8 @@ const server= http.createServer((req, res) =>{
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.write( "add " + test.add(2, 3)+ "\n");
-    res.write("multiply " + test.zombie(4,5,6));
+    res.write("multiply " + test.zombie(4,5,6)+ "\n");
+    res.write("logic " + test.zombie(4,5,6, 7));
     res.end();
 });
 
